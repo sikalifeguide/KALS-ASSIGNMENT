@@ -1,0 +1,67 @@
+.kals-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+    h1 {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: blue;
+    }
+    marquee {
+        font-size: 1em;
+        color: rgb(255, 8, 0);
+        margin-bottom: 20px;
+    }
+
+.event-item {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(38, 3, 235, 0.966);
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
+}
+
+.event-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.event-item:hover img {
+    transform: scale(1.1);
+}
+
+.event-caption {
+    margin-top: 10px;
+    font-size: 1em;
+    
+}
+
+/* Animation Keyframes */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.event-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.event-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.event-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
